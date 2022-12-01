@@ -1,1 +1,1 @@
-# SemanticVideoTransformer
+# Semantic Video Transformer
