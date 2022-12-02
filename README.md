@@ -1,4 +1,7 @@
 # End-to-End Semantic Video Transformer for Zero-Shot Action Recognition
+
+Code and proposed experimentation setup for the paper [End-to-End Semantic Video Transformer for Zero-Shot Action Recognition](https://arxiv.org/abs/2203.05156). The annotated class descriptions can be found in the Annotations folder. 
+
 ## Proposed Fair ZSL Test Setup
 
 We pool the valid test classes from several benchmark datasets to form a novel test set. Altogether, there are 30 unique classes from the UCF-101, HMDB-51, and ActivityNet datasets, as shown in the table below. We handpick each class carefully such that it does not violate the zero-shot learning (ZSL) premise.
