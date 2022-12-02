@@ -44,3 +44,12 @@ In the figure below, we visualize the semantic embeddings of the classes in Kine
 
 ![overlap](https://github.com/Secure-and-Intelligent-Systems-Lab/SemanticVideoTransformer/blob/main/tsne.png?raw=true)
 
+## Irrelevant Classes
+
+In the figure below, we breakdown the performance of the proposed model over all the classes in the UCF dataset (i.e., not only the ones included in the proposed test set). We observe that for several classes such as *nunchucks*, *YoYo*, *unevenbars*, the proposed approach is unable to classify even a single video correctly. This problem is not due to the proposed method, but due to the sheer dissimilarity of these classes with respect to the training classes in the Kinetics dataset. Since any practical algorithm will miss such classes, this emphasizes the need for removing classes that are completely irrelevant with respect to the training set from the test set.
+
+![overlap](https://github.com/Secure-and-Intelligent-Systems-Lab/SemanticVideoTransformer/blob/main/bar.png?raw=true)
+
+## Computational Efficiency 
+
+Thanks to the scalability of the proposed SVT (semantic video transformer) model, we are able to vary the length of the input video snippet (i.e., number of frames), which also leads to an increase in the number of input tokens. In Table 3 in the paper, we see a significant increase in the performance when the number of input frames are increased from 8 to 96. Increasing the number of video frames is intuitive since it allows a model to better capture the spatiotemporal activities that span several frames. However, due to the current GPU limitations, we are unable to further increase the input length. On the other hand, even after increasing our model complexity to accommodate 96 input frames, our model is still more computationally efficient as compared to the I3D model with 8 input frames, which requires 10.8 TFLOPS for inference, in contrast to the proposed SVT-8 model, which only requires 0.79 TFLOPS, and SVT-96, which requires 7.57 TFLOPS.  
