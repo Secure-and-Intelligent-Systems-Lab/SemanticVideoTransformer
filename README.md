@@ -37,3 +37,10 @@ ActivityNet      | Washing face
 ActivityNet      | Washing hands  
 
 We next explain the rationale behind excluding the overlapping classes and completely irrelevant classes in the proposed test set. 
+
+## Overlap between Datasets
+
+In the figure below, we visualize the semantic embeddings of the classes in Kinetics, ActivityNet and UCF-101 datasets. We see that there are several classes in all the test datasets that directly overlap with the training dataset (Kinetics), which is a violation of the ZSL paradigm. 
+
+![overlap](https://github.com/Secure-and-Intelligent-Systems-Lab/SemanticVideoTransformer/blob/main/tsne.png?raw=true)
+
