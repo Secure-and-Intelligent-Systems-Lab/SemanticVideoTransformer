@@ -46,6 +46,9 @@ We next explain the rationale behind excluding the overlapping classes and compl
 In the figure below, we visualize the semantic embeddings of the classes in Kinetics, ActivityNet and UCF-101 datasets. We see that there are several classes in all the test datasets that directly overlap with the training dataset (Kinetics), which is a violation of the ZSL paradigm. 
 
 ![overlap](https://github.com/Secure-and-Intelligent-Systems-Lab/SemanticVideoTransformer/blob/main/tsne.png?raw=true)
+
+Specifically, the visualization of the overlapping classes between UCF-101 and Kinetics-600/700 are shown below. The Kinetics classes in green are considered as overlapping by comparing the cosine distance between the Word2Vec embeddings with a threshold and removed in B. Brattoli et al., "Rethinking zero-shot video classification: End-to-end training for realistic applications", CVPR 2020. The Kinetics classes in red are given by Word2Vec as the semantically nearest classes to the corresponding UCF-101 class, but not removed in the B. Brattoli et al. paper. For several cases, the actual closest Kinetics classes, shown in blue, are missed by Word2Vec. They are almost identical to the corresponding UCF-101 classes, and thus violate the ZSL idea.
+
 ![overlap](https://github.com/Secure-and-Intelligent-Systems-Lab/SemanticVideoTransformer/blob/main/Overlaps.png?raw=false)
 
 ## Irrelevant Classes
